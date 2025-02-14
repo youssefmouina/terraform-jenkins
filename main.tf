@@ -9,14 +9,14 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-1a"
 }
 
 # Create a VPC
 resource "aws_instance" "web_server" {
-  ami           = "ami-0440d3b780d96b29d" # Replace with the desired AMI ID
+  ami           = "ami-04681163a08179f28" # Replace with the desired AMI ID
   instance_type = var.ec2_instance_type
   tags = {
-    Name = "web-server"
+    Name = "web-server-terraform"
   }
 }
